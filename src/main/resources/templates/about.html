@@ -1,42 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Agri Start UP Today</title>
+    <title>About Us | E-Cell MIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <nav class="bg-green-800 text-white shadow-2xl sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-seedling text-yellow-400 text-3xl"></i>
-                <span class="text-xl font-black uppercase tracking-tighter">Agri Start UP Today</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-semibold">
-                <a href="/" class="hover:text-yellow-400">Home</a>
-                <a href="/about" class="text-yellow-400">About</a>
-                <a href="/events" class="hover:text-yellow-400">Events</a>
-                <a href="/team" class="hover:text-yellow-400">Team</a>
-                <a href="/gallery" class="hover:text-yellow-400">Gallery</a>
-                <a href="/contact" class="hover:text-yellow-400">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <div th:replace="~{fragments :: navbar}"></div>
 
     <section class="py-20 max-w-5xl mx-auto px-4">
-        <h1 class="text-5xl font-extrabold text-green-800 mb-8 text-center">Our Vision & Mission</h1>
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-green-600">
-                <h2 class="text-2xl font-bold mb-4">Mission</h2>
-                <p class="text-gray-600 leading-relaxed italic">"Modern technology ko agriculture se jodkar kisanon ki zindagi asaan banana." Hum MIT Meerut ke students ko entrepreneurship ke liye inspire karte hain.</p>
+        <h2 class="text-4xl font-extrabold text-blue-600 mb-8">About E-Cell MIT</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-l-8 border-blue-600">
+                <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                <p class="text-gray-600">MIT Meerut mein ek aisa ecosystem banana jahan har student apne idea ko ek viable business mein badal sake.</p>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-yellow-400">
-                <h2 class="text-2xl font-bold mb-4">Goal</h2>
-                <p class="text-gray-600 leading-relaxed">Agle 2 saalon mein 50+ Agri-based startups ko MIT E-Cell ke through launch karna.</p>
+            <div class="bg-white p-8 rounded-3xl shadow-lg border-l-8 border-green-600">
+                <h3 class="text-2xl font-bold mb-4 italic text-green-700 uppercase text-sm tracking-widest">Active Focus</h3>
+                <h4 class="text-xl font-black mb-2">Agri Start UP Today</h4>
+                <p class="text-gray-600">Kheti-kisani mein technology aur innovation laakar Indian agriculture ko upgrade karna.</p>
             </div>
         </div>
     </section>
+
+    <div th:replace="~{fragments :: footer}"></div>
 </body>
 </html>
