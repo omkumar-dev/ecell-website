@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Agri Start UP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex">
+        <div class="w-64 bg-green-800 min-h-screen p-6 text-white">
+            <h1 class="text-xl font-black mb-10 tracking-tighter italic">AGRI ADMIN</h1>
+            <nav class="space-y-4">
+                <a href="#" class="block bg-green-700 p-3 rounded-lg font-bold"><i class="fas fa-home mr-3"></i>Dashboard</a>
+                <a href="/gallery" class="block hover:bg-green-700 p-3 rounded-lg"><i class="fas fa-images mr-3"></i>Gallery Edit</a>
+                <a href="/" class="block hover:bg-green-700 p-3 rounded-lg border-t border-green-600 pt-6 mt-10"><i class="fas fa-sign-out-alt mr-3"></i>Logout</a>
+            </nav>
+        </div>
+
+        <div class="flex-1 p-10">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-extrabold text-gray-800">Registration Hub</h2>
+                <span class="bg-yellow-400 text-green-900 px-4 py-1 rounded-full font-bold">Live Status: Active</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-blue-500">
+                    <p class="text-gray-500 font-bold uppercase text-xs">Total Registrations</p>
+                    <p class="text-3xl font-black text-gray-800">Check Logs</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="p-6 bg-gray-50 border-b">
+                    <h3 class="font-bold text-gray-700 italic">Registered Students (H2 Database coming soon...)</h3>
+                </div>
+                <div class="p-10 text-center text-gray-400">
+                    <i class="fas fa-database text-5xl mb-4"></i>
+                    <p>Connect H2/MySQL database to see live entries here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
