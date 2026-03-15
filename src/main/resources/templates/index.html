@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Cell MIT | Fueling Innovation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 font-sans">
+
     <div th:replace="~{fragments :: navbar}"></div>
+
     <header class="py-24 text-center bg-white border-b">
         <h1 class="text-6xl font-black text-gray-900 mb-6">E-CELL <span class="text-blue-600">MIT</span></h1>
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto italic font-bold text-green-700 uppercase tracking-widest underline decoration-green-300">Agri Start UP Today Flagship Project</p>
         <a th:href="@{/contact}" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-blue-700 transition">Get Involved</a>
     </header>
-    <div th:replace="~{fragments :: footer}"></div>
-</body>
-</html>
+
+    <section id="gallery" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">Event <span class="text-blue-400">Gallery</span></h2>
+                    <p class="text-gray-400 mt-2">Moments from our latest E-Cell MIT sessions.</p>
+                </div>
+                <a th:href="@{/gallery}" class="text-blue-400 font-bold hover:underline mb-2 transition hover:text-white">View All Photos →</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg">
+                    <span class="group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-bold">Agri Visit</span>
+                </div>
