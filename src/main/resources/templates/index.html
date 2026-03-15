@@ -1,7 +1,99 @@
 <!DOCTYPE html>
-<html>
-<body>
-    <h1>E-Cell MIT Website Live!</h1>
-    <p>Welcome to the Entrepreneurship Cell.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cell MIT | Innovating Futures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <span class="text-2xl font-bold text-blue-600">E-CELL <span class="text-gray-800">MIT</span></span>
+                <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+                    <a href="#home" class="hover:text-blue-600 transition">Home</a>
+                    <a href="#events" class="hover:text-blue-600 transition">Events</a>
+                    <a href="#team" class="hover:text-blue-600 transition">Team</a>
+                </div>
+                <a href="#register" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Register Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="bg-white py-20 px-4 border-b">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Fueling the <span class="text-blue-600">Entrepreneurs</span> of Tomorrow.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">The Entrepreneurship Cell at MIT is a platform for students to turn ideas into successful business ventures.</p>
+                <a href="#events" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-blue-700 transition">Explore Events</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <i class="fas fa-lightbulb text-[120px] text-yellow-400 animate-pulse"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="team" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">Meet Our <span class="text-blue-600">Team</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Om Kumar</h3>
+                    <p class="text-blue-600 font-medium">Technical Head</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-users text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">E-Cell MIT</h3>
+                    <p class="text-blue-600 font-medium">Core Committee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-blue-50 p-8 rounded-2xl shadow-lg border border-blue-100">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Event Registration</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none" placeholder="name@mit.edu">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Select Event</label>
+                        <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none">
+                            <option>Shark Tank MIT</option>
+                            <option>Startup Workshop</option>
+                            <option>Idea Pitching</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300">Submit Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-10 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>&copy; 2026 E-Cell MIT. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
