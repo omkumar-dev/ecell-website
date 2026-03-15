@@ -1,21 +1,23 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Gallery | Agri Start UP Today</title>
+    <title>Gallery | E-Cell MIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900">
-    <section class="py-20 max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-green-400 mb-16 italic">Visual Highlights</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-600 text-gray-500">Seminar Hall</div>
-            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-600 text-gray-500">Workshop Lab</div>
-            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-600 text-gray-500">Award Night</div>
-            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-600 text-gray-500">Idea Pitch</div>
+<body class="bg-gray-900 text-white">
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <section class="py-20 max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-16 italic">E-Cell <span class="text-blue-400">Memories</span></h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 text-gray-500">Workshop</div>
+            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 text-gray-500">Agri Visit</div>
+            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 text-gray-500">Award Day</div>
+            <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 text-gray-500">Seminar</div>
         </div>
     </section>
+
+    <div th:replace="~{fragments :: footer}"></div>
 </body>
 </html>
