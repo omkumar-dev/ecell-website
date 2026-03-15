@@ -4,7 +4,7 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Step 2: Run phase (Using a stable image)
-FROM openjdk:17-alpine
+FROM eclipse-temurin:17-jdk
 COPY --from=build /target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app.jar"]
