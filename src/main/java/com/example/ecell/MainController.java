@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam; // Login parameters ke liye zaroori hai
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -35,27 +35,33 @@ public class MainController {
 
     @PostMapping("/register")
     public String registerUser(@ModelAttribute Registration reg, RedirectAttributes redirectAttributes) {
-        System.out.println("New Registration: " + reg.getFullName());
-        redirectAttributes.addFlashAttribute("message", "Thank you " + reg.getFullName() + "! Your registration is successful.");
+        // Detailed logging for Render console
+        System.out.println(">>> NEW REGISTRATION DATA <<<");
+        System.out.println("Full Name: " + reg.getFullName());
+        System.out.println("Email    : " + reg.getEmail());
+        System.out.println("Event    : " + reg.getEvent());
+        System.out.println("-----------------------------");
+
+        // Flash message for the UI
+        redirectAttributes.addFlashAttribute("message", "Thank you " + reg.getFullName() + "! Registration successful.");
+        
+        // redirect keyword will solve your 'LinkedHashMap' warning
         return "redirect:/contact";
     }
 
-    // --- Core Member Access (Login & Dashboard) ---
+    // --- Core Member Access ---
 
-    // Login Page dikhane ke liye
     @GetMapping("/login")
     public String loginPage() {
         return "login";
     }
 
-    // Login logic handle karne ke liye
     @PostMapping("/core-login")
     public String handleLogin(@RequestParam String username, 
                               @RequestParam String password, 
                               Model model) {
         
-        // Simple logic: username "admin" aur password "mit123"
-        // Aap ise baad mein badal sakte hain
+        // Simple authentication check
         if ("admin".equals(username) && "mit123".equals(password)) {
             return "redirect:/dashboard"; 
         } else {
@@ -64,7 +70,6 @@ public class MainController {
         }
     }
 
-    // Core Member Dashboard
     @GetMapping("/dashboard")
     public String dashboard() {
         return "dashboard"; 
