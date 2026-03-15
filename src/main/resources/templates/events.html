@@ -1,23 +1,25 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Events | Agri Start UP Today</title>
+    <title>Events | E-Cell MIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <section class="py-20 max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-16 underline decoration-yellow-400">Upcoming Events</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-10 rounded-3xl shadow-xl hover:shadow-2xl transition border-l-8 border-green-600">
-                <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-bold uppercase">Hackathon</span>
-                <h3 class="text-2xl font-bold mt-4">Agri-Code Hack 2026</h3>
-                <p class="text-gray-500 mt-2"><i class="far fa-clock mr-2"></i>25th March, 10 AM - MIT Lab</p>
-                <button class="mt-6 bg-green-700 text-white px-6 py-2 rounded-lg font-bold">Register Now</button>
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <section class="py-20 max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-16">Upcoming <span class="text-blue-600">Events</span></h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-8 rounded-3xl shadow-xl text-left border-t-8 border-blue-600">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Idea Pitching</span>
+                <h3 class="text-2xl font-bold mt-4">Agri-Tech Hackathon</h3>
+                <p class="text-gray-500 my-4">Solve real-world farming problems with code. Cash prizes for winners!</p>
+                <a th:href="@{/contact}" class="text-blue-600 font-bold hover:underline">Register Now →</a>
             </div>
         </div>
     </section>
+
+    <div th:replace="~{fragments :: footer}"></div>
 </body>
 </html>
