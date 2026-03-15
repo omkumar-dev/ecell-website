@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav th:fragment="navbar" class="bg-white shadow-xl sticky top-0 z-50 border-b-2 border-blue-600">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black text-blue-600 tracking-tighter uppercase">E-CELL <span class="text-gray-800">MIT</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-gray-600 text-sm uppercase">
+                <a th:href="@{/}" class="hover:text-blue-600 transition">Home</a>
+                <a th:href="@{/about}" class="hover:text-blue-600 transition">About</a>
+                <a th:href="@{/events}" class="hover:text-blue-600 transition">Events</a>
+                <a th:href="@{/team}" class="hover:text-blue-600 transition">Team</a>
+                <a th:href="@{/gallery}" class="hover:text-blue-600 transition">Gallery</a>
+                <a th:href="@{/contact}" class="hover:text-blue-600 transition">Contact</a>
+            </div>
+
+            <a th:href="@{/login}" class="bg-blue-600 text-white px-6 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">
+                CORE LOGIN
+            </a>
+        </div>
+    </nav>
+
+    <footer th:fragment="footer" class="bg-gray-900 text-white py-12 text-center mt-20">
+        <div class="mb-6">
+            <span class="text-xl font-bold">E-CELL <span class="text-blue-400">MIT</span></span>
+            <p class="text-gray-400 mt-2">Meerut Institute of Technology, Meerut</p>
+        </div>
+        <p class="text-sm opacity-50">&copy; 2026 E-Cell MIT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
