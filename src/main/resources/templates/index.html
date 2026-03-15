@@ -1,61 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agri Start UP Today | MIT E-Cell</title>
+    <title>E-Cell MIT | Innovating Futures</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 font-sans">
 
-    <nav class="bg-green-700 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="text-2xl font-black tracking-tighter italic">AGRI START UP TODAY</div>
-                
-                <div class="hidden md:flex space-x-6 font-medium">
-                    <a href="/" class="text-yellow-400">Home</a>
-                    <a href="/about" class="hover:text-green-200 transition">About</a>
-                    <a href="/events" class="hover:text-green-200 transition">Events</a>
-                    <a href="/team" class="hover:text-green-200 transition">Team</a>
-                    <a href="/gallery" class="hover:text-green-200 transition">Gallery</a>
-                    <a href="/contact" class="hover:text-green-200 transition">Contact</a>
-                </div>
-                <a href="/contact" class="bg-white text-green-700 px-6 py-2 rounded-full font-bold hover:bg-green-100 transition shadow-lg">Join Us</a>
+    <div th:replace="~{fragments :: navbar}"></div>
+
+    <header id="home" class="bg-white py-20 px-4 border-b">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Fueling the <span class="text-blue-600">Entrepreneurs</span> of Tomorrow.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">The Entrepreneurship Cell at MIT is a platform for students to turn ideas into successful business ventures.</p>
+                <a th:href="@{/events}" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-blue-700 transition">Explore Events</a>
             </div>
-        </div>
-    </nav>
-
-    <header class="py-24 bg-green-600 text-white text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Innovating <span class="text-yellow-400">Agriculture</span></h1>
-            <p class="text-xl opacity-90 mb-10">Supporting the next generation of Agri-Entrepreneurs at Meerut Institute of Technology.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="/events" class="bg-yellow-400 text-green-900 px-8 py-3 rounded-lg font-bold hover:bg-yellow-300">Explore Events</a>
-                <a href="/about" class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-700">Learn More</a>
+            <div class="md:w-1/2 flex justify-center">
+                <i class="fas fa-lightbulb text-[120px] text-yellow-400 animate-pulse"></i>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-green-800 mb-6">Welcome to the Agri-Hub</h2>
-            <p class="text-lg text-gray-600">
-                MIT E-Cell ke through hum kisanon aur technology ke beech ki doori ko khatam kar rahe hain. 
-                Hamara mission students ko aise platform dena hai jahan wo apne startup ideas ko reality mein badal sakein.
-            </p>
+    <section id="team" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12">Meet Our <span class="text-blue-600">Team</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Om Kumar</h3>
+                    <p class="text-blue-600 font-medium">Technical Head</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-users text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">E-Cell MIT</h3>
+                    <p class="text-blue-600 font-medium">Core Committee</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a th:href="@{/team}" class="text-blue-600 font-bold hover:underline">View Full Team →</a>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-green-900 text-white py-12 text-center">
-        <p class="mb-4">Meerut Institute of Technology, Meerut</p>
-        <div class="flex justify-center space-x-6 text-2xl">
-            <a href="#" class="hover:text-green-400"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="hover:text-green-400"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p class="mt-6 text-sm opacity-50">&copy; 2026 Agri Start UP Today. All Rights Reserved.</p>
-    </footer>
+    <div th:replace="~{fragments :: footer}"></div>
 
 </body>
 </html>
