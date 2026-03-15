@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Admin Dashboard | E-Cell MIT</title>
+    <title>Dynamic Dashboard | E-Cell MIT</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gray-100">
     <div th:replace="~{fragments :: navbar}"></div>
     <div class="max-w-7xl mx-auto py-12 px-4">
-        <div class="bg-white rounded-3xl shadow-xl p-10">
-            <h1 class="text-4xl font-black text-gray-800 mb-6">Admin Dashboard</h1>
-            <div class="bg-blue-50 border-l-8 border-blue-600 p-6 rounded-r-xl">
-                <p class="text-blue-700 font-bold">Welcome, Core Member! Real-time registration database will be displayed here soon.</p>
-            </div>
+        <h1 class="text-3xl font-black mb-8 text-blue-800 uppercase">Live Registrations</h1>
+        
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-blue-600 text-white">
+                    <tr>
+                        <th class="p-4">ID</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Email</th>
+                        <th class="p-4">Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="reg : ${registrations}" class="border-b hover:bg-gray-50 transition">
+                        <td class="p-4 font-bold" th:text="${reg.id}"></td>
+                        <td class="p-4" th:text="${reg.fullName}"></td>
+                        <td class="p-4" th:text="${reg.email}"></td>
+                        <td class="p-4">
+                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold" th:text="${reg.event}"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
