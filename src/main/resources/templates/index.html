@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Cell MIT | Fueling Innovation</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <div th:replace="~{fragments :: header_scripts}"></div>
+    
     <style>
         .gradient-text {
             background: linear-gradient(to right, #2563eb, #059669);
@@ -28,12 +25,12 @@
     <header class="relative py-24 overflow-hidden border-b">
         <div class="hero-pattern absolute inset-0"></div>
         <div class="max-w-7xl mx-auto px-4 relative z-10 flex flex-col items-center text-center">
-            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">Innovate • Build • Scale</span>
+            <span class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-sm">Innovate • Build • Scale</span>
             <h1 class="text-6xl md:text-8xl font-black text-gray-900 mb-6 tracking-tighter">
                 E-CELL <span class="text-blue-600">MIT</span>
             </h1>
             <p class="text-2xl text-gray-600 mb-10 max-w-3xl leading-relaxed">
-                Empowering the next generation of founders at <span class="font-bold text-gray-800 underline decoration-blue-400">MIT Meerut</span>. 
+                Empowering the next generation of founders at <span class="font-bold text-gray-800 underline decoration-blue-400 italic">MIT Meerut</span>. 
                 From ideation to investment, we've got you covered.
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
@@ -48,26 +45,26 @@
     </header>
 
     <section class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-gray-900 uppercase italic">Why Join <span class="text-blue-600">E-Cell?</span></h2>
-                <p class="text-gray-500 mt-2">Everything you need to build a startup on campus.</p>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-16">
+                <h2 class="text-4xl font-black text-gray-900 uppercase italic tracking-tighter">Why Join <span class="text-blue-600">E-Cell?</span></h2>
+                <p class="text-gray-500 mt-2 font-medium">Everything you need to build a startup on campus.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-blue-500 hover:shadow-2xl transition">
-                    <i class="fas fa-rocket text-4xl text-blue-600 mb-6"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-blue-500 hover:shadow-2xl transition group">
+                    <i class="fas fa-rocket text-4xl text-blue-600 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-4">Ideation Hub</h3>
-                    <p class="text-gray-600">Turn your raw ideas into structured business plans with expert mentoring.</p>
+                    <p class="text-gray-600">Turn your raw ideas into structured business plans with expert mentoring and market analysis.</p>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-green-500 hover:shadow-2xl transition">
-                    <i class="fas fa-seedling text-4xl text-green-600 mb-6"></i>
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-green-500 hover:shadow-2xl transition group">
+                    <i class="fas fa-seedling text-4xl text-green-600 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-4">Agri-Focus</h3>
-                    <p class="text-gray-600">Exclusive support for agriculture startups under 'Agri StartUP Today' initiative.</p>
+                    <p class="text-gray-600">Exclusive support for agriculture startups under our flagship 'Agri StartUP Today' initiative.</p>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-yellow-500 hover:shadow-2xl transition">
-                    <i class="fas fa-handshake text-4xl text-yellow-500 mb-6"></i>
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-xl border-b-8 border-yellow-500 hover:shadow-2xl transition group">
+                    <i class="fas fa-handshake text-4xl text-yellow-500 mb-6 group-hover:scale-110 transition"></i>
                     <h3 class="text-2xl font-bold mb-4">Networking</h3>
-                    <p class="text-gray-600">Connect with alumni founders, industry experts, and potential co-founders.</p>
+                    <p class="text-gray-600">Connect with alumni founders, industry experts, and potential co-founders from MIT Meerut.</p>
                 </div>
             </div>
         </div>
@@ -75,18 +72,18 @@
 
     <section class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="bg-gradient-to-br from-green-900 to-green-800 rounded-[3rem] p-12 md:p-20 text-white relative">
-                <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+            <div class="bg-gradient-to-br from-green-900 to-green-800 rounded-[3rem] p-12 md:p-20 text-white relative shadow-2xl">
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
                     <div class="md:w-2/3">
-                        <span class="bg-yellow-400 text-green-900 px-4 py-1 rounded-full font-black text-xs uppercase mb-6 inline-block">Flagship Project</span>
+                        <span class="bg-yellow-400 text-green-900 px-4 py-1 rounded-full font-black text-xs uppercase mb-6 inline-block tracking-widest">Flagship Project</span>
                         <h2 class="text-5xl md:text-7xl font-black mb-6 italic tracking-tighter">AGRI START UP TODAY</h2>
-                        <p class="text-xl text-green-100 mb-10 leading-relaxed">
+                        <p class="text-xl text-green-100 mb-10 leading-relaxed font-medium">
                             Revolutionizing agriculture by integrating digital innovation with traditional farming. 
-                            We are currently scouting for AI & IoT solutions in the farming sector.
+                            We are scouting for AI & IoT solutions in the farming sector.
                         </p>
                         <a th:href="@{/about}" class="inline-block border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-green-900 transition">Explore Project Details</a>
                     </div>
-                    <div class="md:w-1/3">
+                    <div class="md:w-1/3 flex justify-center">
                         <i class="fas fa-leaf text-[150px] text-green-400 opacity-20 animate-pulse"></i>
                     </div>
                 </div>
@@ -96,36 +93,36 @@
 
     <section id="gallery" class="py-24 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-end mb-12">
-                <div>
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4">
+                <div class="text-center md:text-left">
                     <h2 class="text-4xl font-black uppercase tracking-tighter">Event <span class="text-blue-400">Gallery</span></h2>
-                    <p class="text-gray-400 mt-2">Moments from our latest E-Cell MIT sessions.</p>
+                    <p class="text-gray-400 mt-2 font-bold">Moments from our latest E-Cell MIT sessions.</p>
                 </div>
                 <a th:href="@{/gallery}" class="text-blue-400 font-bold hover:underline mb-2 transition hover:text-white">View All Photos →</a>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg">
-                    <span class="group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-bold">Agri Visit</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="aspect-square bg-gray-800 rounded-3xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg relative">
+                    <span class="z-10 group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-black uppercase text-sm">Agri Visit</span>
                 </div>
-                <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg">
-                    <span class="group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-bold">Workshop</span>
+                <div class="aspect-square bg-gray-800 rounded-3xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg relative">
+                    <span class="z-10 group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-black uppercase text-sm">Workshop</span>
                 </div>
-                <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg">
-                    <span class="group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-bold">Pitch Deck</span>
+                <div class="aspect-square bg-gray-800 rounded-3xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg relative">
+                    <span class="z-10 group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-black uppercase text-sm">Pitch Deck</span>
                 </div>
-                <div class="aspect-square bg-gray-800 rounded-2xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg">
-                    <span class="group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-bold">E-Cell Meet</span>
+                <div class="aspect-square bg-gray-800 rounded-3xl flex items-center justify-center border border-gray-700 group overflow-hidden cursor-pointer hover:border-blue-500 transition shadow-lg relative">
+                    <span class="z-10 group-hover:scale-110 group-hover:text-blue-400 transition duration-500 font-black uppercase text-sm">E-Cell Meet</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-blue-600">
+    <section class="py-24 bg-blue-600 shadow-inner">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-black text-white mb-6 uppercase">Have a Business Idea?</h2>
-            <p class="text-blue-100 text-xl mb-10">Don't let it fade away. Bring it to E-Cell MIT and let's build it together.</p>
-            <a th:href="@{/contact}" class="bg-white text-blue-600 px-12 py-5 rounded-2xl font-black text-2xl shadow-2xl hover:bg-gray-100 transition inline-block">SUBMIT YOUR IDEA</a>
+            <h2 class="text-4xl md:text-5xl font-black text-white mb-6 uppercase tracking-tighter italic">Have a Business Idea?</h2>
+            <p class="text-blue-100 text-xl mb-10 font-bold">Don't let it fade away. Bring it to E-Cell MIT and let's build it together.</p>
+            <a th:href="@{/contact}" class="bg-white text-blue-600 px-12 py-5 rounded-2xl font-black text-2xl shadow-2xl hover:bg-gray-100 transition inline-block transform active:scale-95">SUBMIT YOUR IDEA</a>
         </div>
     </section>
 
