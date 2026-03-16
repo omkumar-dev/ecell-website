@@ -4,39 +4,65 @@
     <div th:replace="~{fragments :: header_scripts}"></div>
     <title>Our Team | E-Cell MIT Meerut</title>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-white font-sans scroll-smooth">
+
     <div th:replace="~{fragments :: navbar}"></div>
 
     <section class="py-20 bg-blue-600 text-white text-center">
-        <h1 class="text-5xl font-black uppercase tracking-tighter">The <span class="text-yellow-400">Core Team</span></h1>
-        <p class="mt-4 text-xl opacity-90 italic">The minds behind innovation at MIT Meerut.</p>
+        <h1 class="text-5xl font-black uppercase tracking-tighter italic">The <span class="text-yellow-400">Core Team</span></h1>
+        <p class="mt-4 text-xl opacity-90 italic">The driving force behind innovation at MIT Meerut.</p>
     </section>
 
     <main class="max-w-7xl mx-auto px-4 py-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             
-            <div class="group bg-white rounded-[3rem] shadow-2xl overflow-hidden border-2 border-transparent hover:border-blue-600 transition-all text-center p-10">
-                <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-blue-50 group-hover:scale-110 transition">
-                    <i class="fas fa-user-tie text-5xl text-blue-600"></i>
+            <div class="group bg-white rounded-[3rem] shadow-2xl overflow-hidden border-2 border-transparent hover:border-blue-600 transition-all duration-500 text-center p-10">
+                <div class="relative w-40 h-40 mx-auto mb-8">
+                    <div class="w-full h-full bg-blue-100 rounded-full flex items-center justify-center border-4 border-blue-50 group-hover:scale-110 transition duration-500">
+                        <i class="fas fa-user-tie text-6xl text-blue-600"></i>
+                    </div>
+                    <div class="absolute -bottom-2 right-4 bg-yellow-400 text-blue-900 text-[10px] font-black px-3 py-1 rounded-full shadow-lg uppercase tracking-widest">
+                        Core
+                    </div>
                 </div>
-                <h3 class="text-2xl font-black text-gray-900 uppercase">Om Kumar</h3>
-                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-2">Technical Head</p>
-                <p class="mt-4 text-gray-500 font-medium">B.Tech CSE Student & Lead Developer of E-Cell Web Portal.</p>
-                <div class="mt-6 flex justify-center space-x-4 text-gray-400">
-                    <a href="https://www.linkedin.com/in/om-kumar-942a5633b" target="_blank" class="hover:text-blue-700"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="#" class="hover:text-gray-900"><i class="fab fa-github text-xl"></i></a>
+
+                <h3 class="text-3xl font-black text-gray-900 uppercase tracking-tighter">Om Kumar</h3>
+                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mt-1">Technical Head</p>
+                
+                <div class="mt-6 space-y-4">
+                    <p class="text-gray-600 font-medium leading-relaxed">
+                        B.Tech (CSE) 4th Sem Student at MIT. Expert in Java, Next.js, and Full-Stack Development.
+                    </p>
+                    
+                    <div class="pt-4">
+                        <a href="https://www.linkedin.com/in/om-kumar-942a5633b" target="_blank" 
+                           class="inline-flex items-center gap-2 bg-[#0077b5] text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#005582] transition shadow-lg transform active:scale-95">
+                            <i class="fab fa-linkedin text-lg"></i> VIEW LINKEDIN PROFILE
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-10 text-gray-400">
-                <i class="fas fa-plus-circle text-4xl mb-4"></i>
-                <p class="font-bold uppercase tracking-tighter">Core Member</p>
-                <p class="text-xs italic">To be announced</p>
+            <div class="bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-10 text-center group">
+                <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-300 group-hover:text-blue-400 transition">
+                    <i class="fas fa-plus-circle text-5xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-gray-400 uppercase tracking-tighter">Core Member</h3>
+                <p class="text-sm italic text-gray-400 mt-2 italic font-medium tracking-widest uppercase">To be announced soon</p>
+            </div>
+
+            <div class="bg-gray-50 rounded-[3rem] border-2 border-dashed border-gray-200 flex flex-col items-center justify-center p-10 text-center group">
+                <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mb-6 text-gray-300 group-hover:text-blue-400 transition">
+                    <i class="fas fa-plus-circle text-5xl"></i>
+                </div>
+                <h3 class="text-xl font-black text-gray-400 uppercase tracking-tighter">Core Member</h3>
+                <p class="text-sm italic text-gray-400 mt-2 italic font-medium tracking-widest uppercase">To be announced soon</p>
             </div>
 
         </div>
     </main>
 
     <div th:replace="~{fragments :: footer}"></div>
+
 </body>
 </html>
