@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="header_scripts">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>E-Cell MIT Meerut – Empowering Entrepreneurship</title>
+    <meta name="description" content="Official website of E-Cell at Meerut Institute of Technology. Discover student-led innovations, startups, blogs, events, and our dynamic team.">
+    <meta name="generator" content="E-Cell MIT Meerut">
+    
+    <meta name="keywords" content="E-Cell MIT Meerut, Entrepreneurship Cell MIT Meerut, MIT Meerut, startup ideas, pitch deck, venture capital, startup India, business plan template, incubation, angel investors, MVP, product-market fit">
+
+    <meta property="og:title" content="E-Cell MIT Meerut – Empowering Entrepreneurship">
+    <meta property="og:description" content="Join the Entrepreneurship Cell at Meerut Institute of Technology and be part of a vibrant startup ecosystem.">
+    <meta property="og:url" content="https://ecell.mitmuf.com">
+    <meta property="og:site_name" content="E-Cell MITMU">
+    <meta property="og:image" content="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745257881/logo_ou2mgs.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="E-Cell MIT Meerut – Student Startup Hub">
+    <meta name="twitter:description" content="Explore startup culture and innovation at E-Cell, MIT Meerut.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745257881/logo_ou2mgs.png">
+
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745257881/logo_ou2mgs.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // Apni Real GA Tracking ID yahan dalein
+    </script>
+</head>
+
 <body>
     <nav th:fragment="navbar" class="bg-white shadow-xl sticky top-0 z-50 border-b-2 border-blue-600">
         <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745257881/logo_ou2mgs.png" alt="E-Cell Logo" class="h-12 w-12 object-contain">
                 <span class="text-2xl font-black text-blue-600 tracking-tighter uppercase">E-CELL <span class="text-gray-800">MIT</span></span>
             </div>
-            
             <div class="hidden md:flex space-x-8 font-bold text-gray-600 text-sm uppercase">
                 <a th:href="@{/}" class="hover:text-blue-600 transition">Home</a>
                 <a th:href="@{/about}" class="hover:text-blue-600 transition">About</a>
@@ -15,13 +52,25 @@
                 <a th:href="@{/gallery}" class="hover:text-blue-600 transition">Gallery</a>
                 <a th:href="@{/contact}" class="hover:text-blue-600 transition">Contact</a>
             </div>
-
-            <a th:href="@{/login}" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition shadow-md">CORE LOGIN</a>
+            <a th:href="@{/login}" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-black hover:bg-blue-700 transition shadow-lg active:scale-95 text-xs uppercase tracking-widest">CORE LOGIN</a>
         </div>
     </nav>
 
-    <footer th:fragment="footer" class="bg-gray-900 text-white py-12 text-center mt-20">
-        <p>&copy; 2026 E-Cell MIT. Meerut Institute of Technology.</p>
+    <footer th:fragment="footer" class="bg-gray-900 text-white py-16 text-center border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col items-center gap-6">
+                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745257881/logo_ou2mgs.png" alt="Logo" class="h-16 w-16 grayscale brightness-200 opacity-50">
+                <p class="text-gray-400 max-w-md">Fueling innovation and entrepreneurship at Meerut Institute of Technology.</p>
+                <div class="flex space-x-6 text-xl text-gray-500">
+                    <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="pt-8 border-t border-gray-800 w-full mt-4 text-sm text-gray-500 font-medium">
+                    &copy; 2026 E-Cell MIT. Meerut Institute of Technology. All Rights Reserved.
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
