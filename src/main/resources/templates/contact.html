@@ -1,77 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | E-Cell MIT</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <div th:replace="~{fragments :: header_scripts}"></div>
+    <title>Register | E-Cell MIT Meerut</title>
 </head>
-<body class="bg-blue-50 font-sans">
-
+<body class="bg-gray-50 font-sans">
     <div th:replace="~{fragments :: navbar}"></div>
 
     <main class="max-w-4xl mx-auto py-20 px-4">
         <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-blue-100">
             <div class="bg-blue-600 p-10 text-white text-center">
-                <h1 class="text-4xl font-black uppercase tracking-tighter">Event Registration</h1>
-                <p class="mt-2 text-blue-100 italic">Secure your spot in our upcoming flagship events.</p>
+                <h1 class="text-4xl font-black uppercase tracking-tighter italic">Register for <span class="text-yellow-400">Success</span></h1>
+                <p class="mt-2 text-blue-100">Join our events or apply for the core team.</p>
             </div>
 
             <form th:action="@{/register}" method="POST" class="p-10 space-y-8">
-                
-                <div th:if="${message}" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-xl font-bold animate-bounce">
+                <div th:if="${message}" class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-xl font-bold animate-pulse text-center">
                     <i class="fas fa-check-circle mr-2"></i> <span th:text="${message}"></span>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-2">
-                        <label class="font-black text-gray-700 uppercase text-xs tracking-widest ml-1">Full Name</label>
-                        <div class="relative">
-                            <i class="fas fa-user absolute left-4 top-4 text-gray-400"></i>
-                            <input type="text" name="fullName" required placeholder="Om Kumar"
-                                class="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition">
-                        </div>
+                        <label class="font-black text-gray-700 uppercase text-xs tracking-widest">Full Name</label>
+                        <input type="text" name="fullName" required placeholder="Enter Name" class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 transition">
                     </div>
-
                     <div class="space-y-2">
-                        <label class="font-black text-gray-700 uppercase text-xs tracking-widest ml-1">Email Address</label>
-                        <div class="relative">
-                            <i class="fas fa-envelope absolute left-4 top-4 text-gray-400"></i>
-                            <input type="email" name="email" required placeholder="om@example.com"
-                                class="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition">
-                        </div>
+                        <label class="font-black text-gray-700 uppercase text-xs tracking-widest">Email Address</label>
+                        <input type="email" name="email" required placeholder="Enter Email" class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 transition">
                     </div>
                 </div>
 
                 <div class="space-y-2">
-                    <label class="font-black text-gray-700 uppercase text-xs tracking-widest ml-1">Select Event / Purpose</label>
-                    <div class="relative">
-                        <i class="fas fa-calendar-check absolute left-4 top-4 text-gray-400"></i>
-                        <select name="event" required 
-                            class="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition appearance-none">
-                            <option value="" disabled selected>Choose an option...</option>
-                            <option value="HACK_HEIST_2.0" class="font-bold text-blue-600">HACK HEIST 2.0 (MIET Meerut)</option>
-                            <option value="AGRI_SUMMIT">Agri StartUP Today Summit</option>
-                            <option value="EC_CORE_TEAM">Join E-Cell Core Team</option>
-                            <option value="GENERAL_QUERY">General Networking</option>
-                        </select>
-                        <i class="fas fa-chevron-down absolute right-4 top-4 text-gray-400 pointer-events-none"></i>
-                    </div>
+                    <label class="font-black text-gray-700 uppercase text-xs tracking-widest">Select Event / Interest</label>
+                    <select name="event" required class="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:ring-2 focus:ring-blue-600 transition font-bold text-gray-700">
+                        <option value="" disabled selected>Choose an option...</option>
+                        <option value="HACK_HEIST_2.0">HACK HEIST 2.0 (MIET Meerut)</option>
+                        <option value="AGRI_SUMMIT">Agri StartUP Today Summit</option>
+                        <option value="CORE_TEAM">Apply for Core Team</option>
+                    </select>
                 </div>
 
-                <div class="pt-4">
-                    <button type="submit" 
-                        class="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-blue-700 shadow-xl transition-all active:scale-95 flex items-center justify-center gap-3">
-                        SUBMIT REGISTRATION <i class="fas fa-paper-plane"></i>
-                    </button>
-                    <p class="text-center text-gray-400 text-sm mt-6 italic">By submitting, you agree to receive event updates via email.</p>
-                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-blue-700 shadow-xl transition active:scale-95 uppercase tracking-widest">
+                    Submit Registration
+                </button>
             </form>
         </div>
     </main>
 
     <div th:replace="~{fragments :: footer}"></div>
-
 </body>
 </html>
