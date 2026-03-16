@@ -4,54 +4,70 @@
     <div th:replace="~{fragments :: header_scripts}"></div>
     <title>About Us | E-Cell MIT Meerut</title>
 </head>
-<body class="bg-white font-sans scroll-smooth">
+<body class="bg-gray-50 font-sans scroll-smooth">
 
     <div th:replace="~{fragments :: navbar}"></div>
 
-    <section class="py-20 bg-gray-50 border-b">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-black text-gray-900 uppercase tracking-tighter">
-                Who <span class="text-blue-600">We Are</span>
-            </h1>
-            <p class="mt-4 text-xl text-gray-500 font-medium max-w-2xl mx-auto italic">
-                Building the entrepreneurship bridge at Meerut Institute of Technology.
-            </p>
-        </div>
+    <section class="py-20 bg-blue-600 text-white text-center">
+        <h1 class="text-5xl font-black uppercase tracking-tighter italic">About <span class="text-yellow-400">E-Cell MIT</span></h1>
+        <p class="mt-4 text-xl opacity-90 italic">Empowering student-led innovation at MIT Meerut.</p>
     </section>
 
-    <section class="py-24 max-w-7xl mx-auto px-4">
+    <main class="max-w-5xl mx-auto py-20 px-4 space-y-12">
+        
         <div class="grid md:grid-cols-2 gap-12">
             
-            <div class="group bg-white p-10 rounded-[3rem] shadow-xl border-2 border-transparent hover:border-blue-600 transition-all duration-500">
-                <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:rotate-12 transition">
-                    <i class="fas fa-eye text-3xl text-blue-600"></i>
+            <div class="bg-white p-10 rounded-[3rem] shadow-2xl border border-blue-100 transform transition hover:scale-[1.02]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-blue-600 p-4 rounded-2xl text-white">
+                        <i class="fas fa-eye text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-black text-gray-900 uppercase tracking-tighter">Our Vision</h2>
                 </div>
-                <h3 class="text-3xl font-black text-gray-900 mb-6 uppercase tracking-tight">Our Vision</h3>
                 <p class="text-gray-600 text-lg leading-relaxed font-medium">
-                    MIT Meerut mein ek aisa ecosystem banana jahan har student apne idea ko ek viable business mein badal sake. Hum innovation ko support karte hain taaki campus se hi naye founders nikal sakein.
+                    MIT Meerut mein ek aisa ecosystem banana jahan har student apne idea ko ek viable business mein badal sake. Hum entrepreneurship culture ko campus ke har kone tak pahunchana chahte hain.
                 </p>
             </div>
 
-            <div class="group bg-white p-10 rounded-[3rem] shadow-xl border-2 border-transparent hover:border-green-600 transition-all duration-500">
-                <div class="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:rotate-12 transition">
-                    <i class="fas fa-leaf text-3xl text-green-600"></i>
+            <div class="bg-white p-10 rounded-[3rem] shadow-2xl border border-green-100 transform transition hover:scale-[1.02]">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="bg-green-600 p-4 rounded-2xl text-white">
+                        <i class="fas fa-seedling text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-green-700 font-black uppercase text-[10px] tracking-widest block">Active Focus</span>
+                        <h2 class="text-2xl font-black text-gray-900 uppercase tracking-tighter">Agri Start UP Today</h2>
+                    </div>
                 </div>
-                <span class="text-green-700 font-black uppercase text-xs tracking-widest mb-2 block">Active Focus</span>
-                <h3 class="text-3xl font-black text-gray-900 mb-6 uppercase tracking-tight">Agri Start UP Today</h3>
                 <p class="text-gray-600 text-lg leading-relaxed font-medium">
-                    Kheti-kisani mein technology aur innovation laakar Indian agriculture ko upgrade karna humara flagship mission hai. Hum AI, IoT aur sustainable solutions par kaam karne wale startups ko mentor karte hain.
+                    Kheti-kisani mein technology aur innovation laakar Indian agriculture ko upgrade karna humara flagship mission hai. Hum AI aur IoT based farming solutions ko support karte hain.
                 </p>
             </div>
 
         </div>
 
-        <div class="mt-20 text-center p-12 bg-blue-600 rounded-[3rem] text-white shadow-2xl">
-            <h2 class="text-3xl md:text-4xl font-black italic tracking-tighter">"Innovation distinguishes between a leader and a follower."</h2>
-            <p class="mt-4 font-bold text-blue-100 uppercase tracking-widest text-sm">— E-Cell MIT Core Philosophy</p>
+        <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-blue-100 mt-20">
+            <div class="bg-blue-600 p-10 text-white text-center">
+                <h2 class="text-3xl font-black uppercase tracking-tighter italic">Ready to <span class="text-yellow-400">Innovate?</span></h2>
+                <p class="mt-2 text-blue-100 italic">Don't wait for the right moment. Create it.</p>
+            </div>
+            <div class="p-10 text-center space-y-6">
+                <p class="text-gray-600 text-lg font-medium max-w-2xl mx-auto">
+                    Agar aapke paas koi startup idea hai ya aap humari core team ka hissa banna chahte hain, toh humari events ya registration page par zaroor jayein.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <a th:href="@{/contact}" class="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black text-lg hover:bg-blue-700 shadow-xl transition active:scale-95 uppercase tracking-widest">
+                        Register Now
+                    </a>
+                    <a th:href="@{/events}" class="border-2 border-blue-600 text-blue-600 px-10 py-4 rounded-2xl font-black text-lg hover:bg-blue-50 transition active:scale-95 uppercase tracking-widest">
+                        View Events
+                    </a>
+                </div>
+            </div>
         </div>
-    </section>
+
+    </main>
 
     <div th:replace="~{fragments :: footer}"></div>
-
 </body>
 </html>
