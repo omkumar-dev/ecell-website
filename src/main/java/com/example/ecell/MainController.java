@@ -5,12 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
 public class MainController {
 
-    // Database access ke liye repository connect ki gayi hai
     @Autowired
     private RegistrationRepository repo;
 
@@ -23,21 +24,42 @@ public class MainController {
     @GetMapping("/contact") public String contact() { return "contact"; }
     @GetMapping("/login") public String loginPage() { return "login"; }
 
-    // DYNAMIC SAVE: Form data ko database mein save karne ke liye
+    // DYNAMIC SAVE: Database mein entry save karne ke liye
     @PostMapping("/register")
     public String registerUser(@ModelAttribute Registration reg, RedirectAttributes ra) {
-        // Ye line data ko H2 Database mein save karegi
         repo.save(reg); 
         ra.addFlashAttribute("message", "Registration Successful for " + reg.getFullName());
         return "redirect:/contact";
     }
 
-    // DYNAMIC VIEW: Dashboard par database se saara data nikal kar dikhane ke liye
+    // DYNAMIC VIEW: Dashboard par data dikhane ke liye
     @GetMapping("/dashboard")
     public String dashboard(Model model) {
         List<Registration> allRegs = repo.findAll();
         model.addAttribute("registrations", allRegs);
         return "dashboard";
+    }
+
+    // DYNAMIC DOWNLOAD: CSV/Excel format mein data download karne ke liye
+    @GetMapping("/dashboard/download")
+    public void downloadCSV(HttpServletResponse response) throws IOException {
+        response.setContentType("text/csv");
+        response.setHeader("Content-Disposition", "attachment; filename=registrations.csv");
+
+        List<Registration> list = repo.findAll();
+        
+        // CSV Header
+        response.getWriter().println("ID,Full Name,Email,Event");
+
+        // CSV Data Rows
+        for (Registration reg : list) {
+            response.getWriter().println(
+                reg.getId() + "," + 
+                reg.getFullName() + "," + 
+                reg.getEmail() + "," + 
+                reg.getEvent()
+            );
+        }
     }
 
     // Login logic handle karne ke liye
