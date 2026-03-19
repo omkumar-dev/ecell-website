@@ -4,159 +4,135 @@
     <div th:replace="~{fragments :: header_scripts}"></div>
     <title>Our Team | E-Cell MIT Meerut</title>
     <style>
-        .profile-img {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .team-card:hover .profile-img {
-            transform: scale(1.1);
-        }
+        .profile-img { transition: transform 0.5s ease; }
+        .team-card:hover .profile-img { transform: scale(1.08); }
     </style>
 </head>
-<body class="bg-gray-50 font-sans scroll-smooth">
-
+<body class="bg-gray-50 font-sans">
     <div th:replace="~{fragments :: navbar}"></div>
 
-    <section class="py-24 bg-blue-600 text-white text-center relative overflow-hidden">
-        <div class="relative z-10">
-            <h1 class="text-6xl font-black uppercase tracking-tighter italic">The <span class="text-yellow-400">Team</span></h1>
-            <p class="mt-4 text-xl opacity-90 italic">The driving force behind innovation at MIT Meerut.</p>
-        </div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-500 rounded-full opacity-20"></div>
+    <section class="py-20 bg-blue-600 text-white text-center">
+        <h1 class="text-5xl font-black uppercase italic tracking-tighter">The <span class="text-yellow-400">Core Team</span></h1>
+        <p class="mt-4 text-lg opacity-80">Meet the visionaries behind MIT's Entrepreneurship Cell.</p>
     </section>
 
-    <main class="max-w-7xl mx-auto px-4 py-24">
+    <main class="max-w-7xl mx-auto px-4 py-20">
         
-        <h2 class="text-3xl font-black text-gray-900 mb-12 uppercase border-l-8 border-blue-600 pl-6 tracking-tighter">Core <span class="text-blue-600">Leadership</span></h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
-            
-            <div class="team-card group bg-white rounded-[3rem] shadow-xl overflow-hidden border border-gray-100 p-8 text-center transition-all hover:shadow-2xl hover:border-blue-600">
-                <div class="relative w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-50">
-                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770447885/om_yshjzy.jpg" alt="Om Kumar" class="profile-img w-full h-full object-cover">
+        <div class="mb-24">
+            <h2 class="text-3xl font-black text-gray-900 mb-10 uppercase border-l-8 border-yellow-400 pl-6">The <span class="text-blue-600">Presidency</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div class="team-card bg-white rounded-[3rem] shadow-xl p-8 text-center border border-gray-100 hover:border-blue-600 transition-all">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745432979/Profile_picture_megha_iy7out.png" class="profile-img w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-blue-50">
+                    <h3 class="text-2xl font-black uppercase">Megha Raj</h3>
+                    <p class="text-blue-600 font-bold uppercase text-xs tracking-widest">President (2023)</p>
+                    <p class="mt-4 text-gray-500 text-sm italic">"Leading with purpose and strategic vision."</p>
+                    <div class="mt-6 flex justify-center gap-4">
+                        <a href="https://www.linkedin.com/in/megha-raj-7aa9b9296" target="_blank" class="text-[#0077b5] text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:megha.raj.bba.2023@mitmeerut.ac.in" class="text-gray-400 text-xl"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <h3 class="text-2xl font-black text-gray-900 uppercase">Om Kumar</h3>
-                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1">Technical Head (2024)</p>
-                <p class="mt-4 text-gray-500 text-sm leading-relaxed min-h-[60px]">Bridging innovation with execution. Focused on scalable development and future-ready tech.</p>
-                <div class="mt-6 flex justify-center gap-3">
-                    <a href="https://www.linkedin.com/in/om-kumar-942a5633b/" target="_blank" class="bg-[#0077b5] text-white p-3 rounded-xl hover:bg-blue-800 transition"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:om.kumar.cs.2024@mitmeerut.ac.in" class="bg-gray-100 text-gray-700 p-3 rounded-xl hover:bg-gray-200 transition"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
-            <div class="team-card group bg-white rounded-[3rem] shadow-xl overflow-hidden border border-gray-100 p-8 text-center transition-all hover:shadow-2xl hover:border-blue-600">
-                <div class="relative w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-50">
-                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745432979/Profile_picture_megha_iy7out.png" alt="Megha Raj" class="profile-img w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-black text-gray-900 uppercase">Megha Raj</h3>
-                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1">President (2023)</p>
-                <p class="mt-4 text-gray-500 text-sm leading-relaxed min-h-[60px]">Leading with purpose and strategic vision. Focused on driving impactful change.</p>
-                <div class="mt-6 flex justify-center gap-3">
-                    <a href="https://www.linkedin.com/in/megha-raj-7aa9b9296" target="_blank" class="bg-[#0077b5] text-white p-3 rounded-xl hover:bg-blue-800 transition"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:megha.raj.bba.2023@mitmeerut.ac.in" class="bg-gray-100 text-gray-700 p-3 rounded-xl hover:bg-gray-200 transition"><i class="fas fa-envelope"></i></a>
+                <div class="team-card bg-white rounded-[3rem] shadow-xl p-8 text-center border border-gray-100 hover:border-blue-600 transition-all">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770745005/Untitled_ydosf4.png" class="profile-img w-40 h-40 rounded-full mx-auto mb-6 object-cover border-4 border-blue-50">
+                    <h3 class="text-2xl font-black uppercase">Adarsh Shukla</h3>
+                    <p class="text-blue-600 font-bold uppercase text-xs tracking-widest">Vice President (2024)</p>
+                    <p class="mt-4 text-gray-500 text-sm italic">"Dedicated to operational excellence and empowering teams."</p>
+                    <div class="mt-6 flex justify-center gap-4">
+                        <a href="https://www.linkedin.com/in/adarsh-shukla-677b16302" target="_blank" class="text-[#0077b5] text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:adarsh.shukla.cs.2024@mitmeerut.ac.in" class="text-gray-400 text-xl"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="team-card group bg-white rounded-[3rem] shadow-xl overflow-hidden border border-gray-100 p-8 text-center transition-all hover:shadow-2xl hover:border-blue-600">
-                <div class="relative w-44 h-44 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-50">
-                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770745005/Untitled_ydosf4.png" alt="Adarsh Shukla" class="profile-img w-full h-full object-cover">
-                </div>
-                <h3 class="text-2xl font-black text-gray-900 uppercase">Adarsh Shukla</h3>
-                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1">Vice President (2024)</p>
-                <p class="mt-4 text-gray-500 text-sm leading-relaxed min-h-[60px]">Dedicated to operational excellence and empowering teams through leadership.</p>
-                <div class="mt-6 flex justify-center gap-3">
-                    <a href="https://www.linkedin.com/in/adarsh-shukla-677b16302" target="_blank" class="bg-[#0077b5] text-white p-3 rounded-xl hover:bg-blue-800 transition"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="mailto:adarsh.shukla.cs.2024@mitmeerut.ac.in" class="bg-gray-100 text-gray-700 p-3 rounded-xl hover:bg-gray-200 transition"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
         </div>
 
-        <h2 class="text-3xl font-black text-gray-900 mb-12 uppercase border-l-8 border-green-500 pl-6 tracking-tighter">Department <span class="text-green-600">Heads</span></h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
-            
-            <div class="bg-white rounded-[2rem] p-6 shadow-lg border border-gray-100 text-center hover:-translate-y-2 transition">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448237/jyoti_mcbgcc.jpg" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-green-500">
-                <h4 class="font-bold text-gray-900">Jyoti Raj Singh</h4>
-                <p class="text-[10px] font-black text-green-600 uppercase">Content & Research Head</p>
-                <div class="mt-4 flex justify-center gap-2">
-                    <a th:href="${'https://www.linkedin.com/in/jyoti-raj-singh-50b15a37a/'}" class="text-blue-600"><i class="fab fa-linkedin"></i></a>
+        <div class="mb-24">
+            <h2 class="text-3xl font-black text-gray-900 mb-10 uppercase border-l-8 border-blue-600 pl-6">Department <span class="text-blue-600">Heads</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-[2.5rem] p-6 shadow-lg text-center hover:-translate-y-2 transition border border-gray-50">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770447885/om_yshjzy.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover ring-4 ring-blue-50">
+                    <h4 class="font-bold text-gray-900">Om Kumar</h4>
+                    <p class="text-[10px] font-black text-blue-600 uppercase">Technical Head</p>
+                    <a href="https://www.linkedin.com/in/om-kumar-942a5633b/" target="_blank" class="mt-3 inline-block text-[#0077b5]"><i class="fab fa-linkedin text-lg"></i></a>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-6 shadow-lg text-center hover:-translate-y-2 transition border border-gray-50">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448237/jyoti_mcbgcc.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover ring-4 ring-blue-50">
+                    <h4 class="font-bold text-gray-900">Jyoti Raj Singh</h4>
+                    <p class="text-[10px] font-black text-blue-600 uppercase">Content & Research Head</p>
+                    <a href="https://www.linkedin.com/in/jyoti-raj-singh-50b15a37a/" target="_blank" class="mt-3 inline-block text-[#0077b5]"><i class="fab fa-linkedin text-lg"></i></a>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-6 shadow-lg text-center hover:-translate-y-2 transition border border-gray-50">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448215/ishwar_nghw2c.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover ring-4 ring-blue-50">
+                    <h4 class="font-bold text-gray-900">Ishwar Sharan</h4>
+                    <p class="text-[10px] font-black text-blue-600 uppercase">PR Head</p>
+                    <a href="https://www.linkedin.com/in/ishwar-sharan-jaiswal-555aa1331/" target="_blank" class="mt-3 inline-block text-[#0077b5]"><i class="fab fa-linkedin text-lg"></i></a>
+                </div>
+                <div class="bg-white rounded-[2.5rem] p-6 shadow-lg text-center hover:-translate-y-2 transition border border-gray-50">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448222/faiyaz_cy5ljv.jpg" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover ring-4 ring-blue-50">
+                    <h4 class="font-bold text-gray-900">Md Faiyaz Sheikh</h4>
+                    <p class="text-[10px] font-black text-blue-600 uppercase">Events Head</p>
+                    <a href="https://www.linkedin.com/in/md-faiyaz-sheikh-tech/" target="_blank" class="mt-3 inline-block text-[#0077b5]"><i class="fab fa-linkedin text-lg"></i></a>
                 </div>
             </div>
-
-            <div class="bg-white rounded-[2rem] p-6 shadow-lg border border-gray-100 text-center hover:-translate-y-2 transition">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448215/ishwar_nghw2c.jpg" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-green-500">
-                <h4 class="font-bold text-gray-900">Ishwar Sharan</h4>
-                <p class="text-[10px] font-black text-green-600 uppercase">PR Head</p>
-                <div class="mt-4 flex justify-center gap-2">
-                    <a th:href="${'https://www.linkedin.com/in/ishwar-sharan-jaiswal-555aa1331/'}" class="text-blue-600"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[2rem] p-6 shadow-lg border border-gray-100 text-center hover:-translate-y-2 transition">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770447752/Untitled_2048_x_2048_px_zycmp3.jpg" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-green-500">
-                <h4 class="font-bold text-gray-900">Prince Kumar</h4>
-                <p class="text-[10px] font-black text-green-600 uppercase">Outreach Head</p>
-                <div class="mt-4 flex justify-center gap-2">
-                    <a th:href="${'https://www.linkedin.com/in/prince-kumar-45a058288/'}" class="text-blue-600"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-[2rem] p-6 shadow-lg border border-gray-100 text-center hover:-translate-y-2 transition">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770448222/faiyaz_cy5ljv.jpg" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-green-500">
-                <h4 class="font-bold text-gray-900">Md Faiyaz Sheikh</h4>
-                <p class="text-[10px] font-black text-green-600 uppercase">Events Head</p>
-                <div class="mt-4 flex justify-center gap-2">
-                    <a th:href="${'https://www.linkedin.com/in/md-faiyaz-sheikh-tech/'}" class="text-blue-600"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
         </div>
 
-        <h2 class="text-3xl font-black text-gray-900 mb-12 uppercase border-l-8 border-gray-400 pl-6 tracking-tighter italic">The <span class="text-gray-500">Legacy</span> (Alumni)</h2>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745434385/Profile_picture_vanshika_sg3k7q.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Vanshika Saxena</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Former President</p>
+        <div class="mb-24">
+            <h2 class="text-2xl font-black text-gray-900 mb-8 uppercase border-l-8 border-gray-300 pl-6">Coordinators & <span class="text-gray-500">Members</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div class="text-center p-4 bg-white rounded-3xl shadow hover:shadow-md transition">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770484558/Saurabh_j1b4av.jpg" class="w-20 h-20 rounded-full mx-auto mb-2 object-cover">
+                    <h5 class="font-bold text-xs">Saurabh Patel</h5>
+                    <p class="text-[8px] text-gray-400 uppercase">Technical Coordinator</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-3xl shadow hover:shadow-md transition">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770485867/Mukesh_sd1ez7.jpg" class="w-20 h-20 rounded-full mx-auto mb-2 object-cover">
+                    <h5 class="font-bold text-xs">Mukesh Kumar</h5>
+                    <p class="text-[8px] text-gray-400 uppercase">Outreach Coordinator</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-3xl shadow hover:shadow-md transition">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770472183/dilkhush_pvtruz.png" class="w-20 h-20 rounded-full mx-auto mb-2 object-cover">
+                    <h5 class="font-bold text-xs">Dilkhush Kumar</h5>
+                    <p class="text-[8px] text-gray-400 uppercase">Creative Coordinator</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-3xl shadow hover:shadow-md transition">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770485888/Nisha_jrjori.png" class="w-20 h-20 rounded-full mx-auto mb-2 object-cover">
+                    <h5 class="font-bold text-xs">Nisha Kumari</h5>
+                    <p class="text-[8px] text-gray-400 uppercase">Event Coordinator</p>
+                </div>
+                <div class="text-center p-4 bg-white rounded-3xl shadow hover:shadow-md transition">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1770485889/Anushka_xqfwvo.jpg" class="w-20 h-20 rounded-full mx-auto mb-2 object-cover">
+                    <h5 class="font-bold text-xs">Anushka Singh</h5>
+                    <p class="text-[8px] text-gray-400 uppercase">Outreach Coordinator</p>
+                </div>
             </div>
-
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745409638/Profile_picture_rahul_f4zbp1.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Rahul Singh</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Former PR Head</p>
-            </div>
-
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1756409925/honey_yd2r5m.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Abhishek Kumar</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Web Developer</p>
-            </div>
-
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745434606/Profile_picture_tabish_di7l0n.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Tabish Manzer</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Former VP</p>
-            </div>
-
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745476648/Profile_picture_ayush_vmcs2m.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Ayush Raj</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Former Event Mgr</p>
-            </div>
-
-            <div class="text-center group">
-                <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745430830/Profile_picture_reshu_q2uqsz.png" class="w-20 h-20 rounded-full mx-auto mb-3 border-2 border-gray-200 group-hover:border-blue-400 transition">
-                <h5 class="font-bold text-xs">Reshu Sharma</h5>
-                <p class="text-[8px] text-gray-500 uppercase">Former Event Mgr</p>
-            </div>
-
         </div>
+
+        <div>
+            <h2 class="text-3xl font-black text-gray-400 mb-10 uppercase border-l-8 border-gray-200 pl-6 italic">The <span class="text-gray-300">Legacy</span> (Alumni)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745434385/Profile_picture_vanshika_sg3k7q.png" class="w-16 h-16 rounded-full mx-auto mb-2 border border-gray-200">
+                    <h5 class="font-bold text-[10px]">Vanshika Saxena</h5>
+                    <p class="text-[7px] text-gray-400 uppercase">Former President</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745434606/Profile_picture_tabish_di7l0n.png" class="w-16 h-16 rounded-full mx-auto mb-2 border border-gray-200">
+                    <h5 class="font-bold text-[10px]">Tabish Manzer</h5>
+                    <p class="text-[7px] text-gray-400 uppercase">Former VP</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1745409638/Profile_picture_rahul_f4zbp1.png" class="w-16 h-16 rounded-full mx-auto mb-2 border border-gray-200">
+                    <h5 class="font-bold text-[10px]">Rahul Singh</h5>
+                    <p class="text-[7px] text-gray-400 uppercase">Former PR Head</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://res.cloudinary.com/dp2olwtzp/image/upload/v1756409925/honey_yd2r5m.png" class="w-16 h-16 rounded-full mx-auto mb-2 border border-gray-200">
+                    <h5 class="font-bold text-[10px]">Abhishek Kumar</h5>
+                    <p class="text-[7px] text-gray-400 uppercase">Web Dev</p>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <div th:replace="~{fragments :: footer}"></div>
-
 </body>
 </html>
